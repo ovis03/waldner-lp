@@ -3,29 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ワルドナ｜恋愛コンサル（6ヶ月徹底伴走）</title>
-  <meta name="description" content="講師：ワルドナ。指導実績200名以上。外見改善・アプリ運用・通話/デート添削・週1面談・24hチャットで6ヶ月徹底伴走。" />
-  <meta property="og:title" content="ワルドナ｜恋愛コンサル（6ヶ月徹底伴走）" />
-  <meta property="og:description" content="行動設計×添削で、恋愛の結果を出す。指導実績200名以上。" />
+  <title>ワルドナ｜理想の彼女を手に入れる恋愛コンサル（6ヶ月伴走）</title>
+  <meta name="description" content="講師：ワルドナ。指導実績200名以上。外見改善/アプリ運用/通話添削/デート添削/週1Zoom/24hチャットで6ヶ月徹底伴走。" />
+  <meta property="og:title" content="ワルドナ｜理想の彼女を手に入れる恋愛コンサル" />
+  <meta property="og:description" content="外見・アプリ・会話・デートを、設計と添削で変える。6ヶ月徹底伴走。" />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0f17" />
+  <meta name="theme-color" content="#eaf4ff" />
+
   <style>
     :root{
-      --bg:#0b0f17;
-      --panel:#0f1624;
-      --panel2:#0c1220;
-      --text:#e7ecf3;
-      --muted:#a9b4c4;
-      --line:rgba(255,255,255,.10);
-      --accent:#6ea8ff;
-      --accent2:#8fffda;
-      --danger:#ff6b6b;
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1120px;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --text:#0b1b2b;
+      --muted:#53657a;
+      --line:rgba(12, 33, 55, .10);
+      --shadow: 0 14px 40px rgba(10, 30, 60, .10);
+      --shadow2: 0 10px 26px rgba(10, 30, 60, .08);
+      --r:18px;
+      --r2:26px;
+
+      --primary:#2f7cff;
+      --primary2:#24c6ff;
+      --ok:#10b981;
+      --warn:#f59e0b;
+
+      --max:1120px;
       --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -33,515 +38,790 @@
       font-family:var(--font);
       color:var(--text);
       background:
-        radial-gradient(1100px 600px at 10% -5%, rgba(110,168,255,.22), transparent 60%),
-        radial-gradient(900px 520px at 90% 0%, rgba(143,255,218,.16), transparent 55%),
-        radial-gradient(1200px 800px at 50% 120%, rgba(110,168,255,.10), transparent 60%),
+        radial-gradient(900px 420px at 15% -5%, rgba(47,124,255,.18), transparent 60%),
+        radial-gradient(820px 420px at 90% 0%, rgba(36,198,255,.12), transparent 55%),
+        radial-gradient(1100px 520px at 50% 120%, rgba(47,124,255,.10), transparent 60%),
         var(--bg);
       line-height:1.75;
-      letter-spacing:.02em;
+      letter-spacing:.01em;
     }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    .muted{color:var(--muted)}
+    .small{font-size:12px;color:var(--muted)}
+    .nowrap{white-space:nowrap}
+
+    /* NAV */
     .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(160%) blur(10px);
-      background:linear-gradient(to bottom, rgba(11,15,23,.90), rgba(11,15,23,.60));
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(180%) blur(10px);
+      background:rgba(247,251,255,.75);
       border-bottom:1px solid var(--line);
     }
-    .navin{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
-    .dot{
-      width:12px;height:12px;border-radius:99px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 0 0 4px rgba(110,168,255,.12);
+    .navin{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo{
+      width:14px;height:14px;border-radius:999px;
+      background:linear-gradient(135deg, var(--primary), var(--primary2));
+      box-shadow:0 0 0 5px rgba(47,124,255,.12);
     }
-    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:13px;
-    }
+    .navlinks{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .navlinks a{font-size:13px;color:var(--muted);padding:10px 10px;border-radius:999px}
+    .navlinks a:hover{background:rgba(47,124,255,.08);color:#1b3a63}
+    .navcta{display:flex;gap:10px;align-items:center}
+
+    /* UI */
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px;
-      border-radius:999px;
-      border:1px solid rgba(110,168,255,.35);
-      background:linear-gradient(135deg, rgba(110,168,255,.18), rgba(143,255,218,.12));
-      color:var(--text);
-      font-weight:700;
-      box-shadow:0 10px 22px rgba(0,0,0,.25);
-      transition:.18s transform ease, .18s opacity ease, .18s box-shadow ease;
-      white-space:nowrap;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:999px;
+      border:1px solid rgba(47,124,255,.25);
+      background:#fff;
+      box-shadow:var(--shadow2);
+      font-weight:900;
+      transition:.18s transform ease,.18s box-shadow ease,.18s opacity ease;
+      cursor:pointer;
     }
-    .btn:hover{transform:translateY(-1px); box-shadow:0 16px 30px rgba(0,0,0,.35)}
-    .btn:active{transform:translateY(0px); opacity:.92}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
     .btn.primary{
       border:0;
-      background:linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#071019;
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
+      color:#fff;
     }
-    .hero{padding:52px 0 26px}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:24px;
-      align-items:stretch;
-    }
-    .card{
+    .btn.ghost{
+      background:rgba(255,255,255,.72);
       border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border-radius:var(--radius2);
+      color:#1b3a63;
+    }
+    .btn:disabled{
+      opacity:.55; cursor:not-allowed;
+      transform:none !important;
+      box-shadow:var(--shadow2);
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.75);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .pill.ok{border-color:rgba(16,185,129,.25); background:rgba(16,185,129,.08); color:#0c6146}
+    .pill.warn{border-color:rgba(245,158,11,.25); background:rgba(245,158,11,.10); color:#7a4a00}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--r2);
       box-shadow:var(--shadow);
       overflow:hidden;
     }
     .cardin{padding:28px}
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      color:var(--muted);
-      font-size:13px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      padding:8px 12px;
-      border-radius:999px;
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size:42px;
-      line-height:1.2;
-      letter-spacing:.01em;
-    }
-    .sub{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-      max-width:60ch;
-    }
-    .herocta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-    .trust{
-      margin-top:18px;
-      display:flex; flex-wrap:wrap; gap:10px;
-    }
-    .trust .pill{background:rgba(0,0,0,.15)}
-    .rightbox{
-      height:100%;
-      background:
-        radial-gradient(700px 380px at 20% 10%, rgba(110,168,255,.18), transparent 60%),
-        radial-gradient(700px 380px at 80% 0%, rgba(143,255,218,.14), transparent 60%),
-        rgba(0,0,0,.10);
-      border-left:1px solid var(--line);
-    }
-    .metric{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:18px;
-    }
-    .mini{
-      padding:14px 14px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:rgba(255,255,255,.04);
-    }
-    .mini b{display:block; font-size:20px}
-    .mini span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
-
-    section{padding:22px 0}
-    .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px; flex-wrap:wrap;
-      margin-bottom:12px;
-    }
-    h2{margin:0; font-size:26px}
-    .hint{color:var(--muted); font-size:13px; max-width:70ch}
     .panel{
+      background:rgba(255,255,255,.72);
       border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius:var(--radius);
+      border-radius:var(--r);
       padding:18px;
     }
-    .cols{
-      display:grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap:14px;
+
+    /* HERO */
+    header{padding:44px 0 14px}
+    .heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
+    h1{margin:10px 0 10px;font-size:40px;line-height:1.18;letter-spacing:.01em}
+    .sub{margin:0;color:var(--muted);font-size:16px;max-width:70ch}
+    .heroCtas{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .heroBadges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+    .kpi{
+      background:rgba(47,124,255,.06);
+      border:1px solid rgba(47,124,255,.15);
+      border-radius:16px;padding:14px;
     }
+    .kpi b{display:block;font-size:20px}
+    .kpi span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+    .heroRight{
+      background:
+        radial-gradient(700px 380px at 15% 10%, rgba(47,124,255,.12), transparent 60%),
+        radial-gradient(600px 360px at 95% 0%, rgba(36,198,255,.10), transparent 58%),
+        rgba(255,255,255,.70);
+      border-left:1px solid var(--line);
+    }
+
+    /* SECTIONS */
+    section{padding:28px 0}
+    .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+    h2{margin:0;font-size:26px}
+    .hint{color:var(--muted);font-size:13px;max-width:85ch}
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
     .item{
+      background:rgba(255,255,255,.78);
       border:1px solid var(--line);
       border-radius:16px;
-      background:rgba(0,0,0,.12);
       padding:16px;
+      min-height:120px;
     }
-    .item h3{margin:0 0 6px; font-size:16px}
-    .item p{margin:0; color:var(--muted); font-size:13px}
-    .list{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
+    .item h3{margin:0 0 6px;font-size:16px}
+    .item p{margin:0;color:var(--muted);font-size:13px}
+
     .bullet{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:14px;
-      border-radius:16px;
+      display:flex;gap:10px;align-items:flex-start;
+      background:rgba(255,255,255,.78);
       border:1px solid var(--line);
-      background:rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:14px;
     }
     .check{
-      width:22px; height:22px; border-radius:8px;
-      background:linear-gradient(135deg, rgba(110,168,255,.24), rgba(143,255,218,.18));
-      border:1px solid rgba(110,168,255,.35);
+      width:22px;height:22px;border-radius:8px;
+      background:linear-gradient(135deg, rgba(47,124,255,.20), rgba(36,198,255,.16));
+      border:1px solid rgba(47,124,255,.22);
       flex:0 0 auto;
       margin-top:2px;
     }
     .bullet b{display:block}
-    .bullet span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
-    .quote{
-      padding:16px;
+    .bullet span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+
+    /* Before/After */
+    .baWrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .baCard{
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow2);
+    }
+    .baHead{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:14px 14px;border-bottom:1px solid var(--line);
+    }
+    .baHead b{font-size:14px}
+    .baImgs{display:grid;grid-template-columns:1fr 1fr}
+    .baImgs figure{margin:0; padding:0; border-right:1px solid var(--line)}
+    .baImgs figure:last-child{border-right:0}
+    .baImgs img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      display:block;
+      background:#eef6ff;
+    }
+    .baCap{padding:12px 14px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+    .noteBox{
+      background:rgba(47,124,255,.06);
+      border:1px solid rgba(47,124,255,.15);
       border-radius:16px;
-      border:1px solid rgba(110,168,255,.20);
-      background:linear-gradient(135deg, rgba(110,168,255,.10), rgba(143,255,218,.06));
-      color:var(--muted);
+      padding:14px;
+      color:#1b3a63;
       font-size:13px;
     }
-    .steps{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .step{
-      padding:16px;
-      border-radius:16px;
+      background:rgba(255,255,255,.78);
       border:1px solid var(--line);
-      background:rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:16px;
     }
     .tag{
-      display:inline-flex; align-items:center;
-      font-size:12px;
-      color:#08121a;
-      font-weight:800;
-      padding:6px 10px;
-      border-radius:999px;
-      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      display:inline-flex;align-items:center;
+      padding:6px 10px;border-radius:999px;
+      font-size:12px;font-weight:900;color:#fff;
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
       margin-bottom:10px;
     }
-    .step h3{margin:0 0 6px; font-size:16px}
-    .step p{margin:0; color:var(--muted); font-size:13px}
+    .step h3{margin:0 0 6px;font-size:16px}
+    .step p{margin:0;color:var(--muted);font-size:13px}
 
+    /* FAQ */
     .faq details{
+      background:rgba(255,255,255,.78);
       border:1px solid var(--line);
       border-radius:16px;
-      background:rgba(0,0,0,.12);
-      padding:14px 14px;
+      padding:14px;
     }
     .faq details+details{margin-top:10px}
     .faq summary{
-      cursor:pointer;
-      font-weight:700;
-      list-style:none;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      cursor:pointer;font-weight:900;
+      list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;
     }
     .faq summary::-webkit-details-marker{display:none}
-    .faq p{margin:10px 0 0; color:var(--muted); font-size:13px}
+    .faq p{margin:10px 0 0;color:var(--muted);font-size:13px}
 
-    .cta{
-      position:relative;
-      padding:28px 0 54px;
-    }
-    .cta .card{border-radius:26px}
-    .cta .cardin{display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .cta b{font-size:18px}
-    .cta span{color:var(--muted); font-size:13px; display:block; margin-top:6px}
+    /* CTA / Sticky */
+    .cta{padding:18px 0 54px}
+    .cta .card{border-radius:28px}
+    .ctaRow{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .ctaRow b{font-size:18px}
+    .ctaRow span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
     .footer{
       padding:22px 0 40px;
-      color:rgba(255,255,255,.55);
+      color:rgba(11,27,43,.62);
       font-size:12px;
       border-top:1px solid var(--line);
       margin-top:18px;
     }
 
-    .stickybar{
-      position:fixed;
-      left:0; right:0; bottom:0;
-      background:linear-gradient(to top, rgba(11,15,23,.92), rgba(11,15,23,.55));
+    .sticky{
+      position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background:rgba(247,251,255,.80);
       border-top:1px solid var(--line);
-      backdrop-filter:saturate(160%) blur(10px);
-      z-index:60;
+      backdrop-filter:saturate(180%) blur(10px);
     }
     .stickyin{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:10px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+      max-width:var(--max);margin:0 auto;padding:10px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
     }
-    .stickyin .left{
-      display:flex; flex-direction:column; gap:2px;
-      min-width:0;
-    }
+    .stickyin .left{display:flex;flex-direction:column;gap:2px;min-width:0}
     .stickyin .left b{font-size:13px}
-    .stickyin .left span{font-size:12px; color:var(--muted)}
-    .small{font-size:12px; color:var(--muted)}
-    .danger{
-      color:rgba(255,255,255,.92);
-      border:1px solid rgba(255,107,107,.26);
-      background:rgba(255,107,107,.08);
+    .stickyin .left span{font-size:12px;color:var(--muted)}
+
+    /* Modal */
+    .modalOverlay{
+      position:fixed; inset:0; z-index:200;
+      background:rgba(10,20,35,.45);
+      display:none;
+      align-items:center; justify-content:center;
+      padding:20px;
+    }
+    .modal{
+      width:min(520px, 100%);
+      background:#fff;
+      border-radius:22px;
+      border:1px solid rgba(12,33,55,.14);
+      box-shadow: 0 20px 70px rgba(10,20,35,.25);
+      overflow:hidden;
+    }
+    .modalHead{
+      padding:16px 18px;
+      border-bottom:1px solid rgba(12,33,55,.10);
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .modalHead b{font-size:16px}
+    .modalBody{padding:16px 18px}
+    .toast{
+      position:fixed; left:50%; transform:translateX(-50%);
+      bottom:84px; z-index:300;
+      background:#0b1b2b; color:#fff;
+      padding:10px 12px; border-radius:999px;
+      font-size:12px;
+      display:none;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
     }
 
     @media (max-width: 900px){
-      .grid{grid-template-columns: 1fr; }
       h1{font-size:34px}
-      .cols{grid-template-columns: 1fr}
-      .list{grid-template-columns: 1fr}
-      .steps{grid-template-columns: 1fr}
+      .heroGrid{grid-template-columns:1fr}
+      .heroRight{border-left:0;border-top:1px solid var(--line)}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .baWrap{grid-template-columns:1fr}
+      .baImgs img{height:280px}
+      .navlinks{display:none} /* スマホはCTAに集中 */
     }
   </style>
 </head>
 
 <body>
+  <!-- NAV -->
   <div class="nav">
     <div class="container">
       <div class="navin">
         <div class="brand">
-          <span class="dot"></span>
+          <span class="logo"></span>
           <span>ワルドナ｜恋愛コンサル</span>
         </div>
+
         <div class="navlinks">
-          <a class="pill" href="#results">実績</a>
-          <a class="pill" href="#support">内容</a>
-          <a class="pill" href="#flow">進め方</a>
-          <a class="pill" href="#faq">FAQ</a>
-          <a class="btn primary" href="#contact">無料相談へ</a>
+          <a href="#problem">悩み</a>
+          <a href="#results">実績</a>
+          <a href="#beforeafter">外見改善</a>
+          <a href="#support">内容</a>
+          <a href="#flow">流れ</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="navcta">
+          <button class="btn primary" id="navLineBtn" type="button">LINEで無料相談</button>
         </div>
       </div>
     </div>
   </div>
 
-  <header class="hero">
+  <!-- HERO -->
+  <header>
     <div class="container">
       <div class="card">
-        <div class="grid">
+        <div class="heroGrid">
           <div class="cardin">
-            <div class="kicker">
-              <span>6ヶ月・徹底伴走</span>
-              <span style="opacity:.55">/</span>
-              <span>指導実績200名以上</span>
-            </div>
+            <div class="pill ok">指導実績 200名+ / サポート 6ヶ月</div>
 
-            <h1>恋愛を“感覚”から<br>「設計と修正」に変える。</h1>
+            <h1>「理想の彼女」を、<br>設計と添削で現実にする。</h1>
             <p class="sub">
-              伸びない原因は、才能ではなく<strong>修正不足</strong>。
-              外見・アプリ・通話/デートの添削まで、行動を見える化して改善します。
+              外見・アプリ・通話・デート。伸びない原因は“才能”ではなく<strong>修正不足</strong>。
+              あなたの行動を見える化して、最短ルートに整えます。
             </p>
 
-            <div class="herocta">
-              <a class="btn primary" href="#contact">無料相談（LINE/フォーム）</a>
-              <a class="btn" href="#support">講習内容を見る</a>
-              <span class="pill danger">※人数制限あり</span>
+            <div class="heroCtas">
+              <button class="btn primary" id="heroLineBtn" type="button">LINEで無料相談（準備中）</button>
+              <a class="btn ghost" href="#support">6ヶ月の内容を見る</a>
+              <span class="pill warn">※少人数で運用</span>
             </div>
 
-            <div class="trust">
-              <span class="pill">外見改善：服/髪/体/肌</span>
-              <span class="pill">アプリ運用：写真/文章/導線</span>
+            <div class="heroBadges">
+              <span class="pill">外見改善：服/髪/体/肌/美容</span>
+              <span class="pill">アプリ：写真/文章/導線</span>
               <span class="pill">添削：通話音声/デート振り返り</span>
-              <span class="pill">面談：週1 Zoom</span>
+              <span class="pill">週1 Zoom</span>
               <span class="pill">24h チャット</span>
             </div>
-          </div>
 
-          <div class="cardin rightbox">
-            <div class="panel" style="padding:18px">
-              <div style="display:flex; gap:10px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;">
-                <div>
-                  <div style="font-weight:800; font-size:18px;">実績の根拠は「行動ログ」</div>
-                  <div class="small">ケーススタディ：講習受講者の行動記録（PDF）に基づく改善プロセス</div>
-                </div>
-                <span class="pill">ケース：3ヶ月で成果が出た記録</span>
-              </div>
-
-              <div class="metric">
-                <div class="mini">
-                  <b>200+ 名</b>
-                  <span>指導実績</span>
-                </div>
-                <div class="mini">
-                  <b>6 ヶ月</b>
-                  <span>サポート期間</span>
-                </div>
-                <div class="mini">
-                  <b>週1 回</b>
-                  <span>Zoom面談</span>
-                </div>
-                <div class="mini">
-                  <b>24h</b>
-                  <span>チャット相談</span>
-                </div>
-              </div>
-
-              <div class="quote" style="margin-top:14px">
-                ※ケーススタディ例：<br>
-                「経験が少ない状態から、アプリ運用→通話→デート振り返り→改善を高速回転させて短期間で成果が出た記録」
-                （提出PDFに詳細な行動ログあり）
-              </div>
-
-              <div class="small" style="margin-top:12px; opacity:.9">
-                ※個人差があります。成果を保証するものではありません。
-              </div>
+            <div class="panel" style="margin-top:16px">
+              <b>ペルソナ（想定）</b><br>
+              <span class="muted">
+                28〜33歳／経験人数5人以下（ガチ童貞ではない）／年収300〜400万／
+                SNSや身近な比較で劣等感や焦りが強い／恋愛コンサルは初めて
+              </span>
             </div>
           </div>
 
+          <div class="cardin heroRight">
+            <div class="panel">
+              <b>講師：ワルドナのストーリー</b>
+              <div class="small" style="margin-top:6px">
+                25歳まで童貞 → 31歳で失恋しアプリで5いいね未満に絶望。<br>
+                もてゾウ講習（生徒数300人規模）で3年間：経験人数3人 → 100人へ。<br>
+                現在はストナンで出会った彼女と同棲中。
+              </div>
+
+              <div class="kpis">
+                <div class="kpi"><b>200+ 名</b><span>指導実績</span></div>
+                <div class="kpi"><b>6 ヶ月</b><span>伴走期間</span></div>
+                <div class="kpi"><b>週1 回</b><span>Zoom面談</span></div>
+                <div class="kpi"><b>24h</b><span>チャット</span></div>
+              </div>
+
+              <div class="noteBox" style="margin-top:14px">
+                <b>重要：</b>成果は行動量・修正速度・状況で個人差があります。<br>
+                本ページは成果を保証するものではありません。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- PROBLEM -->
   <section id="problem">
     <div class="container">
-      <div class="section-title">
-        <h2>あなたが詰まるポイントはだいたい同じ</h2>
-        <div class="hint">努力しているのに伸びないのは「間違いの放置」が原因。</div>
+      <div class="sectionTitle">
+        <h2>こんな悩みがあるなら、伸びる余地がある</h2>
+        <div class="hint">あなたの悩みは“能力不足”ではなく「設計の欠落」か「修正不足」。</div>
       </div>
 
-      <div class="cols">
+      <div class="grid3">
         <div class="item">
-          <h3>① 外見が“通ってない”</h3>
-          <p>清潔感だけでは不足。体型・髪型・素材感・サイズ感のズレで落ちます。</p>
+          <h3>普通かそれ以下の子としか関係を持てない</h3>
+          <p>可愛い子を見ると劣等感が刺さる。妥協が増えて、自分も相手も傷つく。</p>
         </div>
         <div class="item">
-          <h3>② アプリ導線が弱い</h3>
-          <p>写真・プロフィール・初手メッセージが噛み合っていない。会う前に終わる。</p>
+          <h3>「羨ましい」「悔しい」がSNSで増幅する</h3>
+          <p>身近な同世代の成功が比較対象。焦燥感が強く、行動がブレる。</p>
         </div>
         <div class="item">
-          <h3>③ 会話と判断がズレる</h3>
-          <p>通話・デートでの「言い方／タイミング／空気」が噛み合わず、次に繋がらない。</p>
+          <h3>恋愛が“再現性”になっていない</h3>
+          <p>アプリ・会話・デートで何が悪いか分からず、改善できないまま時間が溶ける。</p>
         </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px">
+        <b>ニーズ → ウォンツ</b><br>
+        <span class="muted">
+          ニーズ：妥協恋愛の恐怖／人に彼女を紹介できない／彼女を自慢したい／比較で病むのを終わらせたい<br>
+          ウォンツ：セフレ3人＋彼女1人／普通以上の子・タイプの子と交際したい
+        </span>
       </div>
     </div>
   </section>
 
+  <!-- RESULTS -->
   <section id="results">
     <div class="container">
-      <div class="section-title">
-        <h2>指導実績（抜粋）</h2>
-        <div class="hint">※表現は公開向けに調整しています（実態は相談時に詳しく共有）。</div>
+      <div class="sectionTitle">
+        <h2>生徒の実績（抜粋）</h2>
+        <div class="hint">公開向けに過度な煽りを避けつつ、事実が伝わる表現にしています。</div>
       </div>
 
-      <div class="panel">
-        <div class="list">
-          <div class="bullet"><div class="check"></div><div><b>経験が少ない22歳 → 3ヶ月で大きく前進し、交際へ</b><span>行動量と修正速度が上がったことで結果が出始めた。</span></div></div>
-          <div class="bullet"><div class="check"></div><div><b>ある程度遊んでいた22歳 → 3ヶ月で成果が伸びる</b><span>感覚を「型」に変え、再現性で伸ばした。</span></div></div>
-          <div class="bullet"><div class="check"></div><div><b>女性経験が少ない20歳 → 3ヶ月で彼女</b><span>外見・アプリ・会話の基礎を同時に整えた。</span></div></div>
-          <div class="bullet"><div class="check"></div><div><b>他講習で成果ゼロの26歳 → 関係構築に成功し交際</b><span>「改善点の特定」ができずに伸びなかった層。</span></div></div>
-          <div class="bullet"><div class="check"></div><div><b>別コンサルでも停滞の24歳 → 結果が出始める</b><span>音声・振り返りを基に修正し続けた。</span></div></div>
-          <div class="bullet"><div class="check"></div><div><b>外見に強い課題があった25歳 → 初めての成功体験（画像あり）</b><span>外見改善×行動設計で“勝てる条件”を作った。</span></div></div>
-        </div>
+      <div class="grid2">
+        <div class="bullet"><div class="check"></div><div>
+          <b>童貞だった22歳 → 3ヶ月で12人の女性と関係を持ち、可愛い彼女と交際開始</b>
+          <span>アプリ運用 → 通話 → デート → 振り返り → 改善を高速回転。</span>
+        </div></div>
 
-        <div class="quote" style="margin-top:14px">
-          ケーススタディとして、受講者が「通話の録音 → 添削 → デート → 振り返り → 改善」を回し、短期間で成果を出した行動ログがあります。
-        </div>
+        <div class="bullet"><div class="check"></div><div>
+          <b>ある程度遊んでいた22歳 → 3ヶ月で12人の女性と関係を持つ</b>
+          <span>感覚を「型」に変えて再現性で伸ばした。</span>
+        </div></div>
+
+        <div class="bullet"><div class="check"></div><div>
+          <b>勉強ばかりで経験が少なかった20歳 → 3ヶ月で彼女と交際開始</b>
+          <span>外見・アプリ・会話を同時に整えて勝率を上げた。</span>
+        </div></div>
+
+        <div class="bullet"><div class="check"></div><div>
+          <b>他講習で結果が出なかった26歳 → 6人の女性と関係を持ち、可愛い彼女と交際開始</b>
+          <span>改善点が見えない状態から、添削で修正が回り始めた。</span>
+        </div></div>
+
+        <div class="bullet"><div class="check"></div><div>
+          <b>他のコンサルでも童貞だった24歳 → 7人の女性と関係を持ち、彼女と交際（2回）</b>
+          <span>通話音声とデート振り返りで“ズレ”を潰した。</span>
+        </div></div>
+
+        <div class="bullet"><div class="check"></div><div>
+          <b>低身長×肥満で童貞だった25歳 → 童貞卒業し、4人の女性と関係を持つ（外見改善の画像あり）</b>
+          <span>外見改善→アプリ導線→デート設計で条件を揃えた。</span>
+        </div></div>
+      </div>
+
+      <div class="noteBox" style="margin-top:14px">
+        <b>補足：</b>成果は個人差があります。結果を保証するものではありません。<br>
+        ただし「何を直せば良いか」が明確になるので、改善速度が上がります。
       </div>
     </div>
   </section>
 
+  <!-- BEFORE/AFTER -->
+  <section id="beforeafter">
+    <div class="container">
+      <div class="sectionTitle">
+        <h2>外見改善のビフォーアフター</h2>
+        <div class="hint">画像は後で差し込みます（GitHubの <span class="nowrap">assets/</span> に配置）。</div>
+      </div>
+
+      <div class="baWrap">
+        <div class="baCard">
+          <div class="baHead">
+            <b>ケース01：清潔感・体型・髪型の改善</b>
+            <span class="pill">Before / After</span>
+          </div>
+          <div class="baImgs">
+            <figure>
+              <img src="assets/before_01.jpg" alt="Before 01">
+            </figure>
+            <figure>
+              <img src="assets/after_01.jpg" alt="After 01">
+            </figure>
+          </div>
+          <div class="baCap">※画像はダミーです。差し替え後に公開してください（許諾必須）。</div>
+        </div>
+
+        <div class="baCard">
+          <div class="baHead">
+            <b>ケース02：服のサイズ感・素材感の改善</b>
+            <span class="pill">Before / After</span>
+          </div>
+          <div class="baImgs">
+            <figure>
+              <img src="assets/before_02.jpg" alt="Before 02">
+            </figure>
+            <figure>
+              <img src="assets/after_02.jpg" alt="After 02">
+            </figure>
+          </div>
+          <div class="baCap">※画像はダミーです。差し替え後に公開してください（許諾必須）。</div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px">
+        <b>外見改善で扱う範囲</b><br>
+        <span class="muted">
+          ファッション／髪型／ボディメイク／スキンケア／美容医療（必要に応じて）<br>
+          「女性から好かれる外見」＋「男らしい姿勢・振る舞い（ノンバーバル）」まで落とし込みます。
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
   <section id="support">
     <div class="container">
-      <div class="section-title">
+      <div class="sectionTitle">
         <h2>講習内容（6ヶ月）</h2>
-        <div class="hint">「何を・いつ・どう直すか」まで落とし込む。精神論で終わらせない。</div>
+        <div class="hint">やることはシンプル。<b>型を入れて、実践して、添削で修正</b>。</div>
       </div>
 
-      <div class="cols">
-        <div class="item"><h3>外見改善コンサル</h3><p>ファッション／髪型／ボディメイク／スキンケア。女性視点で“通る外見”へ。</p></div>
-        <div class="item"><h3>アプリ運用コンサル</h3><p>写真選定・改善／プロフィール添削／メッセージ設計。導線を最適化。</p></div>
-        <div class="item"><h3>電話添削（音声）</h3><p>実際の通話音声を提出→改善点を具体指摘。自分の癖を潰す。</p></div>
-        <div class="item"><h3>デート添削（振り返り）</h3><p>デート後の振り返りを基に、判断ミス・改善点を明確化。</p></div>
-        <div class="item"><h3>週1 Zoom面談</h3><p>行動計画／進捗／思考修正。全国対応で習慣化まで支援。</p></div>
-        <div class="item"><h3>24時間チャット</h3><p>迷う時間を減らす。行動判断・質問・悩みを即解決。</p></div>
+      <div class="grid3">
+        <div class="item">
+          <h3>外見改善コンサル</h3>
+          <p>服/髪/体/肌/美容。あなたの属性に合わせて“勝てる見た目”を作る。</p>
+        </div>
+        <div class="item">
+          <h3>アプリ運用コンサル</h3>
+          <p>写真・プロフィール・メッセージ導線を最適化。無駄撃ちを減らす。</p>
+        </div>
+        <div class="item">
+          <h3>電話添削（音声）</h3>
+          <p>女性との通話録音を提出 → 改善点を具体指摘。会話のズレを潰す。</p>
+        </div>
+        <div class="item">
+          <h3>アポ添削（デート振り返り）</h3>
+          <p>振り返りを基に、判断ミス・空気の読み違い・誘導の弱さを修正。</p>
+        </div>
+        <div class="item">
+          <h3>週1 Zoom面談</h3>
+          <p>目標から逆算して行動設計。全国対応。悩みもその場で整理。</p>
+        </div>
+        <div class="item">
+          <h3>24時間チャット</h3>
+          <p>迷う時間を減らす。行動判断・相談・改善が止まらない。</p>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px">
+        <b>生徒の活動内容（狙い）</b><br>
+        <span class="muted">
+          ・アプリ運用 → 通話 → デート → 振り返り → 改善を高速回転し、短期間で成果を出す<br>
+          ・アプリだけに偏らず、体験（バンジー/スカイダイビング/ストリートナンパ/相席屋/高級レストラン等）で「男の器」を底上げ
+        </span>
       </div>
     </div>
   </section>
 
+  <!-- FLOW -->
   <section id="flow">
     <div class="container">
-      <div class="section-title">
-        <h2>進め方（最短で結果に寄せる）</h2>
-        <div class="hint">“知る→やる→直す”の高速ループ。ここが他と違う。</div>
+      <div class="sectionTitle">
+        <h2>受講の流れ</h2>
+        <div class="hint">無料相談 → 診断 → 行動設計 → 添削で修正 → 習慣化。</div>
       </div>
 
       <div class="steps">
-        <div class="step"><div class="tag">STEP 1</div><h3>現状診断：ボトルネック特定</h3><p>外見・アプリ・会話・行動量のどこで止まっているかを切り分け。</p></div>
-        <div class="step"><div class="tag">STEP 2</div><h3>型の導入：最短の行動設計</h3><p>あなたの属性に合わせて「やること」を具体化。迷いを排除。</p></div>
-        <div class="step"><div class="tag">STEP 3</div><h3>添削：音声/振り返りで修正</h3><p>伸びない理由を言語化し、次の一手まで落とす。</p></div>
-        <div class="step"><div class="tag">STEP 4</div><h3>習慣化：再現性を固定</h3><p>結果が出ても戻る人が多い。行動習慣として定着させる。</p></div>
+        <div class="step">
+          <div class="tag">STEP 1</div>
+          <h3>無料相談（準備中）</h3>
+          <p>現状の悩みと目標をヒアリング。ここで“詰まり”を言語化します。</p>
+        </div>
+        <div class="step">
+          <div class="tag">STEP 2</div>
+          <h3>ボトルネック診断</h3>
+          <p>外見・アプリ・会話・判断のどこが原因かを切り分けます。</p>
+        </div>
+        <div class="step">
+          <div class="tag">STEP 3</div>
+          <h3>行動設計</h3>
+          <p>あなたの条件に合わせた「やること・順番・頻度」を固定化。</p>
+        </div>
+        <div class="step">
+          <div class="tag">STEP 4</div>
+          <h3>添削で修正 → 習慣化</h3>
+          <p>通話音声/デート振り返りでズレを潰し、勝てる行動に定着させます。</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq">
     <div class="container">
-      <div class="section-title">
+      <div class="sectionTitle">
         <h2>FAQ</h2>
-        <div class="hint">相談前に多い質問をまとめました。</div>
+        <div class="hint">購入前の不安を潰します。</div>
       </div>
 
       <div class="faq">
         <details>
-          <summary>Q. 地方でも受けられますか？ <span class="pill">Zoom対応</span></summary>
-          <p>A. 可能です。面談はZoom、チャットと添削もオンライン完結で対応します。</p>
+          <summary>Q. 地方でも受けられますか？ <span class="pill ok">Zoom対応</span></summary>
+          <p>A. 可能です。面談はZoom、添削・チャットもオンラインで完結します。</p>
         </details>
+
         <details>
           <summary>Q. 忙しくても続けられますか？</summary>
-          <p>A. 可能です。可処分時間に合わせて「最低限やるべき行動」を設計し、優先順位を固定します。</p>
+          <p>A. 可処分時間に合わせて「最低限の行動」と「伸びる順番」を設計します。</p>
         </details>
-        <details>
-          <summary>Q. どんなサポートが一番効きますか？</summary>
-          <p>A. 多くの人は「音声添削」と「デート添削」で一気に伸びます。自分の癖が可視化されるからです。</p>
-        </details>
+
         <details>
           <summary>Q. 料金は？</summary>
-          <p>A. 公開ページでは非表示にし、無料相談で説明する形式が安全です（決済・規約面も含め）。</p>
+          <p>A. 公式LINE完成後に案内します。公開ページでは詳細非公開にしています。</p>
+        </details>
+
+        <details open>
+          <summary>Q. LINEがまだ無いけど、どうすれば？ <span class="pill warn">現在ここ</span></summary>
+          <p>A. 今はLPを整えておき、公式LINE完成後にボタンを有効化します（実装済み）。</p>
         </details>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="cta">
     <div class="container">
       <div class="card">
         <div class="cardin">
-          <div>
-            <b>無料相談で「あなたのボトルネック」を切り分けます</b>
-            <span>外見・アプリ・会話・行動量。どこから直すべきか明確にします。</span>
+          <div class="ctaRow">
+            <div>
+              <b>無料相談は公式LINE完成後に開放します</b>
+              <span>ボタンは「準備中」。完成したらURL差し替えだけで即運用できます。</span>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn primary" id="ctaLineBtn" type="button">LINEで無料相談（準備中）</button>
+              <a class="btn ghost" href="#results">実績をもう一度見る</a>
+            </div>
           </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn primary" href="https://example.com" target="_blank" rel="noopener">LINEで無料相談</a>
-            <a class="btn" href="mailto:example@example.com">メールで相談</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="footer">
-        <div class="container" style="padding:0">
-          <div>© ワルドナ｜恋愛コンサル</div>
-          <div style="margin-top:8px">
-            ※本ページは情報提供を目的とし、成果を保証するものではありません。個人差があります。<br>
-            ※サービス内容・提供方法は予告なく変更する場合があります。
+          <div class="panel" style="margin-top:16px">
+            <b>注意事項（公開向け）</b><br>
+            <span class="muted">
+              ・成果は個人差があります／結果を保証しません。<br>
+              ・ビフォーアフター画像は必ず本人許諾の上で公開してください。<br>
+              ・過度な表現や誇張は、プラットフォームや決済の審査でリスクになります。
+            </span>
           </div>
+
+          <div class="footer">
+            <div>© ワルドナ｜恋愛コンサル</div>
+            <div style="margin-top:8px">
+              ※本ページは情報提供を目的とし、成果を保証するものではありません。個人差があります。<br>
+              ※サービス内容・提供方法は予告なく変更する場合があります。
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <div class="stickybar">
+  <!-- STICKY CTA -->
+  <div class="sticky">
     <div class="stickyin">
       <div class="left">
-        <b>6ヶ月・徹底伴走｜ワルドナ 恋愛コンサル</b>
-        <span>ボトルネックを切り分け → 行動設計 → 添削で修正</span>
+        <b>6ヶ月伴走｜外見×アプリ×添削で最短修正</b>
+        <span>LINE導線は公式LINE完成後に有効化（現在：準備中）</span>
       </div>
-      <a class="btn primary" href="#contact">無料相談へ</a>
+      <button class="btn primary" id="stickyLineBtn" type="button">LINEで無料相談</button>
     </div>
   </div>
+
+  <!-- MODAL -->
+  <div class="modalOverlay" id="modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modalHead">
+        <b id="modalTitle">公式LINEは準備中です</b>
+        <button class="btn ghost" id="closeModal" type="button">閉じる</button>
+      </div>
+      <div class="modalBody">
+        <div class="noteBox">
+          <b>今やること：</b><br>
+          ① 公式LINEを作成 → ② URL（lin.ee/〜）を取得 → ③ このLPのボタンに貼るだけで運用開始。
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <b>貼る場所（後でやる）</b><br>
+          <span class="muted">
+            index.html の中にある <span class="nowrap">LINE_URL_HERE</span> を置換すればOK。<br>
+            例：<span class="nowrap">https://lin.ee/xxxxx</span>
+          </span>
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <button class="btn primary" id="copyGuide" type="button">置換方法をコピー</button>
+          <a class="btn ghost" href="#contact" id="jumpContact">このまま閉じる</a>
+        </div>
+
+        <div class="small" style="margin-top:10px">
+          ※公式LINE完成まではこのモーダルが出ます。完成後はコード内のURL差し替えで自動的に遷移します。
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast">コピーしました</div>
+
+  <script>
+    // ========= SETTINGS =========
+    // 公式LINEができたらここにURLを入れる（例： https://lin.ee/xxxxx ）
+    const LINE_URL = "LINE_URL_HERE"; // ← 公式LINE完成後に差し替え
+
+    // ========= Helpers =========
+    const $ = (sel) => document.querySelector(sel);
+    const modal = $("#modal");
+    const toast = $("#toast");
+
+    function openModal(){
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal(){
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.style.display = "block";
+      setTimeout(()=> toast.style.display = "none", 1400);
+    }
+    function isLineReady(){
+      return LINE_URL && LINE_URL !== "LINE_URL_HERE" && LINE_URL.startsWith("http");
+    }
+
+    function handleLineClick(){
+      if (isLineReady()){
+        window.open(LINE_URL, "_blank", "noopener");
+        return;
+      }
+      openModal();
+    }
+
+    // ========= Bind CTA Buttons =========
+    ["navLineBtn","heroLineBtn","ctaLineBtn","stickyLineBtn"].forEach(id=>{
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("click", handleLineClick);
+    });
+
+    // ========= Smooth scroll for anchor links =========
+    document.addEventListener("click", (e)=>{
+      const a = e.target.closest("a[href^='#']");
+      if (!a) return;
+      const href = a.getAttribute("href");
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+
+    // ========= Modal controls =========
+    $("#closeModal").addEventListener("click", closeModal);
+    modal.addEventListener("click", (e)=>{
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener("keydown", (e)=>{
+      if (e.key === "Escape" && modal.style.display === "flex") closeModal();
+    });
+
+    $("#copyGuide").addEventListener("click", async ()=>{
+      const text =
+`【公式LINEのURLを貼る方法】
+1) index.html を開く
+2) const LINE_URL = "LINE_URL_HERE"; を探す
+3) "LINE_URL_HERE" をあなたのURLに置換
+   例: const LINE_URL = "https://lin.ee/xxxxx";
+4) Commit → 自動で反映`;
+      try{
+        await navigator.clipboard.writeText(text);
+        showToast("コピーしました");
+      }catch{
+        showToast("コピー失敗（手動でコピーしてOK）");
+      }
+    });
+
+    // ========= Initial state labels =========
+    // LINE未完成時に「準備中」感を統一
+    if (!isLineReady()){
+      // 何もしない（モーダルで案内）
+    }
+  </script>
 </body>
 </html>
